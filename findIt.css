@@ -1,0 +1,48 @@
+#canvas-container {
+    width: 100%;
+    text-align:center;
+  }
+  
+  #canvas {
+    display: inline;
+    border: 1px solid black;
+   }
+   button {
+       width:60px;
+       height: 40px;
+       margin-bottom: 5px;
+       background: rgb(34, 161, 224);
+       font-style: Chalkduster;
+       font-size: 26px;
+       color: rgb(218, 211, 211);
+       box-shadow: blue;
+    
+   }
+  
+  canvas {
+    background: url('https://lh4.googleusercontent.com/jMohO6zR8xMwygetJXgrsM6EnN7qQqIpBW5bodF-iM7Nv5Dr2IkAsguCC3V0fvWH8Wk=w2400');
+    
+  }
+
+  h1 {
+    font-family: Chalkduster;
+    font-size: 80px;
+  }
+
+  p {
+    font-family: Bradley Hand;
+    font-size: 40px;
+    
+  }
+
+  #waffles {
+ 
+    
+    border: 5px solid black;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+  }
