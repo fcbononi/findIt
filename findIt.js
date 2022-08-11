@@ -46,104 +46,81 @@ window.onload = function() {
         context.fillStyle = 'white';
         context.fillText("I found it " + score + " times!!", 20, 40);
 
-        context.beginPath();
-        context.rect(x+3, y-1, 100, 35);
-        context.fillStyle="#4a3126";
-        context.fill();
+        //dog
+        class dogObject {
+            constructor(x,y,w,h,color) {
+                this.x = x;
+                this.y = y;
+                this.w = w;
+                this.h = h;
+                this.color = color;
+            }
+            drawObject() {
+                context.beginPath();
+                context.rect(this.x, this.y, this.w, this.h);
+                context.fillStyle = this.color;
+                context.fill();
+            }
+        }
+    
+        body = new dogObject(x+3,y-1,100,35,"#4a3126");
+        body.drawObject();
+    
+        tail1 = new dogObject(x+91, y-9, 20, 10, "#4a3126");
+        tail1.drawObject();        
+    
+        tail2 = new dogObject(x+100, y-18, 20, 10, "#4a3126");
+        tail2.drawObject();
+    
+        tail3 = new dogObject(x+110, y-30, 10, 20, "#4a3126");
+        tail3.drawObject();    
+          
+        leg1 = new dogObject(x+80, y+33, 30, 11, "#4a3126");
+        leg1.drawObject();
+    
+        leg2 = new dogObject(x+70, y+33, 10, 11, "black");
+        leg2.drawObject();
+    
+        leg3 = new dogObject(x+80, y+44, 10, 21, "black");
+        leg3.drawObject();
 
-        context.beginPath();
-        context.rect(x+91, y-9, 20, 10);
-        context.fillStyle="#4a3126";
-        context.fill();
+        leg4 = new dogObject(x+100, y+44, 10, 21, "#4a3126");
+        leg4.drawObject();
 
-        context.beginPath();
-        context.rect(x+100, y-18, 20, 10);
-        context.fillStyle="#4a3126";
-        context.fill();
+        leg5 = new dogObject(x+70, y+64, 10, 11, "black");
+        leg5.drawObject();
+    
+        leg6 = new dogObject(x+13, y+33, 45, 11, "#4a3126");
+        leg6.drawObject();
 
-        context.beginPath();
-        context.rect(x+110, y-30, 10, 20);
-        context.fillStyle="#4a3126";
-        context.fill();
+        leg7 = new dogObject(x-9, y+44, 46, 11, "#4a3126");
+        leg7.drawObject();
 
-        context.beginPath();
-        context.rect(x+80, y+33,30, 11);
-        context.fillStyle="#4a3126";
-        context.fill();
-
-        context.beginPath();
-        context.rect(x+70, y+33,10, 11);
-        context.fillStyle="black";
-        context.fill();
-
-        context.beginPath();
-        context.rect(x+80, y+44,10, 21);
-        context.fillStyle="black";
-        context.fill();
-
-        context.beginPath();
-        context.rect(x+100, y+44,10, 21);
-        context.fillStyle="#4a3126";
-        context.fill();
-
-        context.beginPath();
-        context.rect(x+70, y+64,10, 11);
-        context.fillStyle="black";
-        context.fill();
-
-        context.beginPath();
-        context.rect(x+13, y+33,45, 11);
-        context.fillStyle="#4a3126";
-        context.fill();
-
-        context.beginPath();
-        context.rect(x-9, y+44,46, 11);
-        context.fillStyle="#4a3126";
-        context.fill();
-
-        context.beginPath();
-        context.rect(x-9, y+54,10, 11);
-        context.fillStyle="#4a3126";
-        context.fill();
-
-        context.beginPath();
-        context.rect(x+27, y+54,10, 11);
-        context.fillStyle="black";
-        context.fill();
-
-        context.beginPath();
-        context.rect(x+17, y+64,10, 11);
-        context.fillStyle="black";
-        context.fill();
-
-        context.beginPath();
-        context.rect(x+3, y-30, 32, 30);
-        context.fillStyle="#4a3126";
-        context.fill();
-
-        context.beginPath();
-        context.rect(x-7, y-30, 30, 22);
-        context.fillStyle="#4a3126";
-        context.fill();
-
-        context.beginPath();
-        context.rect(x+15, y-40, 20, 30);
-        context.fillStyle="#4a3126";
-        context.fill();
-
-        context.beginPath();
-        context.rect(x+25, y-50, 10, 30);
-        context.fillStyle="#4a3126";
-        context.fill();
-
-        context.beginPath();
-        context.rect(x+5, y-50, 10, 10);
-        context.fillStyle="#4a3126";
-        context.fill();
-
+        leg8 = new dogObject(x-9, y+54, 10, 11, "#4a3126");
+        leg8.drawObject();
         
-        
-        
+        leg9 = new dogObject(x+27, y+54, 10, 11, "black");
+        leg9.drawObject();
+
+        leg10 = new dogObject(x+17, y+64, 10, 11, "black");
+        leg10.drawObject();
+
+        head1 = new dogObject(x+3, y-30, 32, 30, "#4a3126");
+        head1.drawObject();
+
+        head2 = new dogObject(x-7, y-30, 30, 22, "#4a3126");
+        head2.drawObject();
+
+        head3 = new dogObject(x+15, y-40, 20, 30, "#4a3126");
+        head3.drawObject();
+
+        head4 = new dogObject(x+25, y-50, 10, 30, "#4a3126");
+        head4.drawObject();
+
+        head5 = new dogObject(x+5, y-50, 10, 10, "#4a3126");
+        head5.drawObject();
+
+        //tennis ball         
         context.beginPath();
         context.arc(coinx, coiny, 20, 0, 2 * Math.PI);
         context.fillStyle="#ccff00";
